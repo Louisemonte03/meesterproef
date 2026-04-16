@@ -1,59 +1,77 @@
 :root {
-  /* backgrounds */
-  --color-bg-primary: #0d0d0d;
-  --color-bg-cellar: #1a1612;
-  --color-bg-card: #f5f0e2;
-
-  /* accent */
-  --color-accent: #c46010;
-  --color-accent-hover: #a34e0c;
-
-  /* typography */
-  --color-text-primary: #f0ead8;
-  --color-text-muted: #a09080;
-
-  /* fonts */
-  --font-heading: "Inter", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-
-  /* layout */
-  --border-radius-card: 8px;
-  --border-radius-label: 4px;
-
-  /* Font sizes */
-  --text-5xl: 4rem;
-  --text-4xl: 3.5rem;
-  --text-3xl: 3rem;
-  --text-2xl: 2rem;
-  --text-xl: 1.5rem;
-  --text-lg: 1.2rem;
-  --text-sm: 0.9rem;
-  --text-xs: 0.8rem;
-  --text-base: 1rem;
-  --text-body-sm: 0.9rem;
-
-  /* Font weights */
-  --weight-regular: 400;
-  --weight-semibold: 600;
-  --weight-bold: 700;
-
-  /* Line heights */
-  --leading-3: 1.3;
-  --leading-4: 1.4;
-  --leading-5: 1.5;
+  --bg: #f0ece0;
+  --bg-tile: #f4f0e5;
+  --bg-tile-top: #f0e4bb;
+  --bg-tile-hover: rgba(0, 0, 0, 0.05);
+  --text: #0d0d1a;
+  --font-mono: "Share Tech Mono", monospace;
+  --border: #e1cfa7;
 }
 
-/* light mode */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-primary: #f5f0e2;
-    --color-bg-cellar: #e8e0d0;
-    --color-bg-stone: #d8d0c0;
-    --color-text-primary: #2a1a08;
-    --color-text-muted: #6a5a48;
-    --color-wood-dark: #5a3f28;
-    --color-wood-light: #7a5a38;
+    --bg: #0d0d1a;
+    --bg-tile: #0f0f1e;
+    --bg-tile-hover: #f0e4bb12;
+    --bg-tile-top: #aeaec83d;
+    --border: #2a2a3e;
+    --text: #f0ece0;
   }
 }
 
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+}
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+}
+
+.intro-text h2 {
+  line-height: 1.2;
+}
+
+/* Vliegtuig animatie: vliegt van boven naar beneden, dan omhoog */
+@keyframes planeEntry {
+  0% {
+    transform: translateY(-300px) scale(0.8);
+    opacity: 0;
+  }
+  45% {
+    transform: translateY(220px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.plane-animated {
+  animation: planeEntry 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (prefers-color-scheme: dark) {
+  .intro-text img {
+    filter: invert(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plane-animated {
+    animation: none;
+  }
+}

@@ -1,0 +1,92 @@
+:root {
+  --bg: #f0ece0;
+  --bg-tile: #f4f0e5;
+  --bg-tile-top: #f0e4bb;
+  --bg-tile-hover: rgba(0, 0, 0, 0.05);
+  --text: #0d0d1a;
+  --font-mono: "Share Tech Mono", monospace;
+  --border: #e1cfa7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d1a;
+    --bg-tile: #0f0f1e;
+    --bg-tile-hover: #f0e4bb12;
+    --bg-tile-top: #aeaec83d;
+    --border: #2a2a3e;
+    --text: #f0ece0;
+  }
+}
+
+.boarding {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.boarding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pass {
+  background: var(--bg-tile);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.pass.hidden {
+  display: none;
+}
+
+.pass-top {
+  background: var(--bg-tile-top);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.pass-code {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--text);
+}
+
+.pass-seat {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.pass-body {
+  padding: 0.75rem;
+}
+
+.pass-body h3 {
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem;
+  color: var(--text);
+}
+
+.pass-body p {
+  font-size: 0.7rem;
+  opacity: 0.65;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pass-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.6rem;
+  opacity: 0.4;
+}

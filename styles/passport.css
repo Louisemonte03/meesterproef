@@ -1,0 +1,255 @@
+.passport {
+  max-width: 800px;
+  margin: 60px auto 80px;
+  padding: 0 1rem;
+}
+
+.passport-book {
+  background: var(--bg-tile);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+/* Header: donkere balk met gouden tekst */
+.passport-header {
+  background: #1a1a3e;
+  color: #d4af37;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 3px solid #d4af37;
+}
+
+.passport-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.passport-country {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.passport-type {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+.passport-emblem {
+  height: 44px;
+  width: 44px;
+  filter: invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9);
+  opacity: 0.9;
+}
+
+/* Bio pagina */
+.passport-body {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.passport-photo {
+  width: 120px;
+  height: 150px;
+  background: var(--bg-tile-top);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  letter-spacing: -2px;
+  color: var(--text);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.passport-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.field-label {
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  opacity: 0.45;
+  text-transform: uppercase;
+}
+
+.field-value {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Stempels */
+.passport-stamps {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.stamps-title,
+.crew-title {
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  opacity: 0.45;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.stamps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stamp {
+  border: 2px solid;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  gap: 2px;
+}
+
+.stamp:nth-child(1) { transform: rotate(-6deg); }
+.stamp:nth-child(2) { transform: rotate(4deg); }
+.stamp:nth-child(3) { transform: rotate(-3deg); }
+.stamp:nth-child(4) { transform: rotate(7deg); }
+.stamp:nth-child(5) { transform: rotate(-5deg); }
+
+.stamp-flight {
+  font-size: 0.5rem;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
+.stamp-dest {
+  font-size: 0.58rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.stamp-date {
+  font-size: 0.5rem;
+  opacity: 0.65;
+}
+
+.stamp-status {
+  font-size: 0.45rem;
+  letter-spacing: 1px;
+}
+
+.stamp-landed {
+  border-color: #7ed321;
+  color: #7ed321;
+  background: rgba(126, 211, 33, 0.07);
+}
+
+.stamp-boarding {
+  border-color: #f5a623;
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.07);
+}
+
+.stamp-scheduled {
+  border-color: #888880;
+  color: #888880;
+  background: rgba(136, 136, 128, 0.07);
+}
+
+/* Crew */
+.passport-crew {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.crew-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+}
+
+.crew-list li {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.crew-list li::before {
+  content: '— ';
+  opacity: 0.4;
+}
+
+/* MRZ zone onderaan */
+.passport-mrz {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .passport-mrz {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.passport-mrz span {
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  font-family: var(--font-mono);
+  word-break: break-all;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .passport-body {
+    grid-template-columns: 1fr;
+  }
+
+  .passport-photo-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .passport-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .passport-stamps,
+  .passport-crew,
+  .passport-body {
+    padding: 1.25rem;
+  }
+
+  .stamps-grid {
+    justify-content: center;
+  }
+}

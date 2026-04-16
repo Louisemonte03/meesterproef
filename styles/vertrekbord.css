@@ -1,0 +1,113 @@
+:root {
+  --bg: #f0ece0;
+  --bg-tile: #f4f0e5;
+  --bg-tile-top: #f0e4bb;
+  --bg-tile-hover: rgba(0, 0, 0, 0.05);
+  --text: #0d0d1a;
+  --font-mono: "Share Tech Mono", monospace;
+  --border: #e1cfa7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d1a;
+    --bg-tile: #0f0f1e;
+    --bg-tile-hover: #f0e4bb12;
+    --bg-tile-top: #aeaec83d;
+    --border: #2a2a3e;
+    --text: #f0ece0;
+  }
+}
+
+/* Vertrekbord stijgt op terwijl het vliegtuig omhoog gaat */
+@keyframes tableRise {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.vertrekbord {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  animation: tableRise 0.9s ease-out 0.85s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vertrekbord {
+    animation: none;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+}
+
+thead {
+  background-color: var(--bg-tile-top);
+  cursor: pointer;
+}
+
+th {
+  padding: 14px 24px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+tbody tr:hover td {
+  background-color: var(--bg-tile-hover);
+  cursor: pointer;
+}
+
+td {
+  padding: 20px 24px;
+  font-size: 13px;
+  color: var(--text);
+  border-bottom: var(--border) solid 1px;
+  background-color: var(--bg-tile);
+}
+
+.city {
+  display: block;
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 12px;
+  color: #888880;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.status.landed {
+  background: rgba(126, 211, 33, 0.15);
+  color: #7ed321;
+}
+
+.status.boarding {
+  background: rgba(245, 166, 35, 0.15);
+  color: #f5a623;
+}
+
+.status.scheduled {
+  background: rgba(136, 136, 128, 0.15);
+  color: #888880;
+}

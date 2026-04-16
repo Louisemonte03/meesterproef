@@ -3,21 +3,399 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine cellar</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Boarding</title>
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/vertrekbord.css" />
+    <link rel="stylesheet" href="styles/boardingspas.css" />
+    <link rel="stylesheet" href="styles/passport.css" />
   </head>
   <body>
     <header>
-      <section class="text-header">
-        <h1>Kiest de juiste wijn</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-          reiciendis
-        </p>
-        <a href="wineshelf.html"> <button>Ga naar wijn</button></a>
+      <section class="intro-text">
+        <img src="images/plane.svg" height="80" width="80" alt="" class="plane-animated" />
+        <div>
+          <h1>Louise Monte</h1>
+          <h2>Meesterproef Airways</h2>
+        </div>
       </section>
     </header>
-    <main></main>
+    <main>
+      <section class="vertrekbord">
+        <table>
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Gate</th>
+              <th>Date</th>
+              <th>Flight</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="city">Sprint 0</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>A12</td>
+              <td>01 SEPT 2025</td>
+              <td>MA001</td>
+              <td><span class="status landed">LANDED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Hackathon</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>B08</td>
+              <td>15 SEPT 2025</td>
+              <td>MA002</td>
+              <td><span class="status landed">LANDED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Weekly Nerd</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>C15</td>
+              <td>01 OCT 2025</td>
+              <td>MA003</td>
+              <td><span class="status landed">LANDED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Weekly Geek</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>D22</td>
+              <td>15 OCT 2025</td>
+              <td>MA004</td>
+              <td><span class="status boarding">BOARDING</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Browser Tech</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>E05</td>
+              <td>01 NOV 2025</td>
+              <td>MA005</td>
+              <td><span class="status boarding">BOARDING</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">CSS to the rescue</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>F18</td>
+              <td>20 NOV 2025</td>
+              <td>MA006</td>
+              <td><span class="status scheduled">SCHEDULED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">API</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>G09</td>
+              <td>05 DEC 2025</td>
+              <td>MA007</td>
+              <td><span class="status scheduled">SCHEDULED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Human Centered Design</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>H24</td>
+              <td>20 DEC 2025</td>
+              <td>MA008</td>
+              <td><span class="status scheduled">SCHEDULED</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="city">Meesterproef</span>
+                <span class="subtitle">TTH 04B09 & 04B21</span>
+              </td>
+              <td>H24</td>
+              <td>20 DEC 2025</td>
+              <td>MA008</td>
+              <td><span class="status scheduled">SCHEDULED</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="boarding">
+        <div class="boarding-grid">
+          <article class="pass">
+            <div class="pass-top">
+              <span class="pass-code">HCD</span>
+              <span class="pass-seat">01A</span>
+            </div>
+            <div class="pass-body">
+              <h3>Human Centered Design</h3>
+              <p>
+                Ontwerpen voor Ihab, een blinde screenreader-gebruiker. Focus op
+                voice interactie en ambient sound.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass">
+            <div class="pass-top">
+              <span class="pass-code">BT</span>
+              <span class="pass-seat">02B</span>
+            </div>
+            <div class="pass-body">
+              <h3>Browser Technologies</h3>
+              <p>
+                Progressive enhancement toegepast op een erfbelasting-formulier
+                met NS-branding.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass">
+            <div class="pass-top">
+              <span class="pass-code">API</span>
+              <span class="pass-seat">03C</span>
+            </div>
+            <div class="pass-body">
+              <h3>API Course</h3>
+              <p>
+                Spotify playlist manager met een Tinder-achtige swipe interface,
+                gebouwd in Astro.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <!-- Verborgen passes -->
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">CSS</span>
+              <span class="pass-seat">04D</span>
+            </div>
+            <div class="pass-body">
+              <h3>CSS to the Rescue</h3>
+              <p>
+                Portfolio website met wijnkelder-thema, SVG-illustraties en pure
+                CSS technieken.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">WG</span>
+              <span class="pass-seat">05E</span>
+            </div>
+            <div class="pass-body">
+              <h3>Weekly Geeks</h3>
+              <p>
+                Reflectie blog over gastspreker-sessies en leerervaringen binnen
+                de minor.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">PT</span>
+              <span class="pass-seat">06F</span>
+            </div>
+            <div class="pass-body">
+              <h3>Project Tech</h3>
+              <p>
+                Technische verdieping in front-end tooling, performance en
+                toegankelijkheid.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">PT</span>
+              <span class="pass-seat">06F</span>
+            </div>
+            <div class="pass-body">
+              <h3>Project Tech</h3>
+              <p>
+                Technische verdieping in front-end tooling, performance en
+                toegankelijkheid.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">PT</span>
+              <span class="pass-seat">06F</span>
+            </div>
+            <div class="pass-body">
+              <h3>Project Tech</h3>
+              <p>
+                Technische verdieping in front-end tooling, performance en
+                toegankelijkheid.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+
+          <article class="pass hidden">
+            <div class="pass-top">
+              <span class="pass-code">PT</span>
+              <span class="pass-seat">06F</span>
+            </div>
+            <div class="pass-body">
+              <h3>Project Tech</h3>
+              <p>
+                Technische verdieping in front-end tooling, performance en
+                toegankelijkheid.
+              </p>
+            </div>
+            <div class="pass-footer">
+              <span>MEESTERSCHAP</span>
+              <span>2025–2026</span>
+            </div>
+          </article>
+        </div>
+
+        <button id="toggle-btn">LAAT MEER ZIEN</button>
+      </section>
+
+      <section class="passport" aria-label="Paspoort">
+        <div class="passport-book">
+
+          <div class="passport-header">
+            <div>
+              <span class="passport-country">MEESTERPROEF AIRWAYS</span>
+              <span class="passport-type">PASPOORT / PASSPORT</span>
+            </div>
+            <img src="images/plane.svg" class="passport-emblem" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="passport-body">
+            <div class="passport-photo-section">
+              <div class="passport-photo" aria-hidden="true">LM</div>
+            </div>
+            <div class="passport-details">
+              <div class="detail-field">
+                <span class="field-label">Achternaam / Surname</span>
+                <span class="field-value">MONTE</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Voornamen / Given names</span>
+                <span class="field-value">LOUISE</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Nationaliteit / Nationality</span>
+                <span class="field-value">FRONTEND DEVELOPER</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Studie</span>
+                <span class="field-value">FDND — Minor Web Development</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Credits</span>
+                <span class="field-value">10 ECTS</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Geldig van / Valid from</span>
+                <span class="field-value">SEP 2025</span>
+              </div>
+              <div class="detail-field">
+                <span class="field-label">Geldig tot / Expiry date</span>
+                <span class="field-value">JUN 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="passport-stamps">
+            <h3 class="stamps-title">VISA &amp; STEMPELS</h3>
+            <div class="stamps-grid">
+              <div class="stamp stamp-landed">
+                <span class="stamp-flight">MA001</span>
+                <span class="stamp-dest">SPRINT 0</span>
+                <span class="stamp-date">FEB 2025</span>
+                <span class="stamp-status">LANDED</span>
+              </div>
+              <div class="stamp stamp-landed">
+                <span class="stamp-flight">MA002</span>
+                <span class="stamp-dest">HACKATHON</span>
+                <span class="stamp-date">MRT 2025</span>
+                <span class="stamp-status">LANDED</span>
+              </div>
+              <div class="stamp stamp-boarding">
+                <span class="stamp-flight">MA003</span>
+                <span class="stamp-dest">WEEKLY NERD</span>
+                <span class="stamp-date">JUN 2025</span>
+                <span class="stamp-status">BOARDING</span>
+              </div>
+              <div class="stamp stamp-boarding">
+                <span class="stamp-flight">MA004</span>
+                <span class="stamp-dest">WEEKLY GEEK</span>
+                <span class="stamp-date">JUN 2025</span>
+                <span class="stamp-status">BOARDING</span>
+              </div>
+              <div class="stamp stamp-scheduled">
+                <span class="stamp-flight">MA009</span>
+                <span class="stamp-dest">MEESTER&shy;PROEF</span>
+                <span class="stamp-date">JUN 2026</span>
+                <span class="stamp-status">SCHEDULED</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="passport-crew">
+            <h3 class="crew-title">CREW / LECTURERS</h3>
+            <ul class="crew-list">
+              <li>Vasilis van Gemert</li>
+              <li>Sanne 't Hooft</li>
+              <li>Cyd Stumpel</li>
+              <li>Jad Joubran</li>
+              <li>Victor Zumpolle</li>
+            </ul>
+          </div>
+
+          <div class="passport-mrz" aria-hidden="true">
+            <span>P&lt;NLD MONTE&lt;&lt;LOUISE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+            <span>MA001&lt;&lt;9NLD2509015F2606195&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;4</span>
+          </div>
+
+        </div>
+      </section>
+    </main>
   </body>
+  <script src="scripts/script.js"></script>
 </html>
